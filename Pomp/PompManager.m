@@ -9,6 +9,7 @@
 #import "PompManager.h"
 
 #import "PompCommunicator.h"
+#import "VideoBuilder.h"
 
 @implementation PompManager
 
@@ -17,9 +18,17 @@
     [self.communicator searchForVideoFromYoutube];
 }
 
-- (void)receiveVideosFromYoutubeJSON:(NSString *)objectNotation
+- (void)receiveVideosFromYoutubeJSON:(NSData *)objectNotation
 {
+    NSError *error = nil;
+    NSArray *videos = [self.videoBuilder videosFromJSON:objectNotation error:&error];
     
+    if (!videos) {
+        [self.delegate fetchVideoFromYoutubeFailedWithError:error];
+        
+    } else {
+        [self.delegate didReceiveVideo:videos];
+    }
 }
 
 - (void)searchVideosFromYoutubeFailedWithError:(NSError *)error

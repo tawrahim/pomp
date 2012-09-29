@@ -11,11 +11,12 @@
 #import "PompManagerDelegate.h"
 #import "PompComunicatorDelegate.h"
 
-@class PompCommunicator;
+@class PompCommunicator, VideoBuilder;
 
 @interface PompManager : NSObject <PompComunicatorDelegate>
 @property (weak) id<PompManagerDelegate> delegate;
 @property (strong) PompCommunicator *communicator;
+@property (strong) VideoBuilder *videoBuilder;
 
 - (void)fetchFeedFromYoutube;
 @end

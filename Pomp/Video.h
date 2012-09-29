@@ -11,7 +11,6 @@
 @interface Video : NSObject
 @property (strong) NSString *title;
 @property (strong) NSString *description;
-@property (strong) NSDate *uploaded;
 @property (strong) NSURL *avatarUrl;
 @property (strong) NSURL *videoUrl;
 

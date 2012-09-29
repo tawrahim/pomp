@@ -11,6 +11,6 @@
 @protocol PompComunicatorDelegate <NSObject>
 
 - (void)searchVideosFromYoutubeFailedWithError:(NSError *)error;
-- (void)receiveVideosFromYoutubeJSON:(NSString *)objectNotation;
+- (void)receiveVideosFromYoutubeJSON:(NSData *)objectNotation;
 
 @end

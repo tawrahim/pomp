@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface VideoBuilder : NSObject
-
+- (NSArray *)videosFromJSON:(NSData *)objectNotaion error:(NSError **)error;
 @end
