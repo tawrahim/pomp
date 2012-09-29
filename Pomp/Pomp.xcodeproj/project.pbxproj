@@ -23,6 +23,10 @@
 		4E80CCA116179C830028CA66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E80CC7C16179C820028CA66 /* Foundation.framework */; };
 		4E80CCA916179C830028CA66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E80CCA716179C830028CA66 /* InfoPlist.strings */; };
 		4E80CCAC16179C830028CA66 /* PompTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E80CCAB16179C830028CA66 /* PompTests.m */; };
+		4E80CCB816179CEB0028CA66 /* PompManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E80CCB716179CEB0028CA66 /* PompManager.m */; };
+		4E80CCBB16179CFC0028CA66 /* PompCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E80CCBA16179CFC0028CA66 /* PompCommunicator.m */; };
+		4E80CCC216179D920028CA66 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E80CCC116179D920028CA66 /* Video.m */; };
+		4E80CCC51617A5430028CA66 /* VideoBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E80CCC41617A5420028CA66 /* VideoBuilder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,16 @@
 		4E80CCA816179C830028CA66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4E80CCAA16179C830028CA66 /* PompTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PompTests.h; sourceTree = "<group>"; };
 		4E80CCAB16179C830028CA66 /* PompTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PompTests.m; sourceTree = "<group>"; };
+		4E80CCB616179CEB0028CA66 /* PompManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PompManager.h; sourceTree = "<group>"; };
+		4E80CCB716179CEB0028CA66 /* PompManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PompManager.m; sourceTree = "<group>"; };
+		4E80CCB916179CFC0028CA66 /* PompCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PompCommunicator.h; sourceTree = "<group>"; };
+		4E80CCBA16179CFC0028CA66 /* PompCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PompCommunicator.m; sourceTree = "<group>"; };
+		4E80CCBD16179D210028CA66 /* PompManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PompManagerDelegate.h; sourceTree = "<group>"; };
+		4E80CCBE16179D390028CA66 /* PompComunicatorDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PompComunicatorDelegate.h; sourceTree = "<group>"; };
+		4E80CCC016179D920028CA66 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		4E80CCC116179D920028CA66 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
+		4E80CCC31617A5420028CA66 /* VideoBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoBuilder.h; sourceTree = "<group>"; };
+		4E80CCC41617A5420028CA66 /* VideoBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoBuilder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +101,7 @@
 		4E80CC6B16179C820028CA66 = {
 			isa = PBXGroup;
 			children = (
+				4E80CCB516179CCB0028CA66 /* Class */,
 				4E80CC8016179C820028CA66 /* Pomp */,
 				4E80CCA416179C830028CA66 /* PompTests */,
 				4E80CC7916179C820028CA66 /* Frameworks */,
@@ -158,6 +173,39 @@
 				4E80CCA716179C830028CA66 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4E80CCB516179CCB0028CA66 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				4E80CCBF16179D440028CA66 /* Modal */,
+				4E80CCBC16179D050028CA66 /* Protocol */,
+				4E80CCB616179CEB0028CA66 /* PompManager.h */,
+				4E80CCB716179CEB0028CA66 /* PompManager.m */,
+				4E80CCB916179CFC0028CA66 /* PompCommunicator.h */,
+				4E80CCBA16179CFC0028CA66 /* PompCommunicator.m */,
+				4E80CCC31617A5420028CA66 /* VideoBuilder.h */,
+				4E80CCC41617A5420028CA66 /* VideoBuilder.m */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
+		4E80CCBC16179D050028CA66 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				4E80CCBD16179D210028CA66 /* PompManagerDelegate.h */,
+				4E80CCBE16179D390028CA66 /* PompComunicatorDelegate.h */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
+		4E80CCBF16179D440028CA66 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				4E80CCC016179D920028CA66 /* Video.h */,
+				4E80CCC116179D920028CA66 /* Video.m */,
+			);
+			name = Modal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +320,10 @@
 				4E80CC8716179C820028CA66 /* main.m in Sources */,
 				4E80CC8B16179C820028CA66 /* AppDelegate.m in Sources */,
 				4E80CC9716179C820028CA66 /* ViewController.m in Sources */,
+				4E80CCB816179CEB0028CA66 /* PompManager.m in Sources */,
+				4E80CCBB16179CFC0028CA66 /* PompCommunicator.m in Sources */,
+				4E80CCC216179D920028CA66 /* Video.m in Sources */,
+				4E80CCC51617A5430028CA66 /* VideoBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
