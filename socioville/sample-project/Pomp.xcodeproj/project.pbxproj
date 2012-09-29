@@ -240,14 +240,14 @@
 /* Begin PBXFileReference section */
 		35D34DDD1541A961000A22BF /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		35D34DDE1541A961000A22BF /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		35D3681D152A455F002D308D /* socioville.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = socioville.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35D3681D152A455F002D308D /* Pomp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D36821152A455F002D308D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		35D36823152A455F002D308D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		35D36825152A455F002D308D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		35D36829152A455F002D308D /* socioville-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "socioville-Info.plist"; sourceTree = "<group>"; };
+		35D36829152A455F002D308D /* Pomp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pomp-Info.plist"; sourceTree = "<group>"; };
 		35D3682B152A455F002D308D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		35D3682D152A455F002D308D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		35D3682F152A455F002D308D /* socioville-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "socioville-Prefix.pch"; sourceTree = "<group>"; };
+		35D3682F152A455F002D308D /* Pomp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pomp-Prefix.pch"; sourceTree = "<group>"; };
 		35D36834152A455F002D308D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		35D36837152A455F002D308D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		35D3684F152A483C002D308D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -536,7 +536,7 @@
 		35D36812152A455F002D308D = {
 			isa = PBXGroup;
 			children = (
-				35D36827152A455F002D308D /* socioville */,
+				35D36827152A455F002D308D /* Pomp */,
 				35D36820152A455F002D308D /* Frameworks */,
 				7B2221EB152B0A090041DAB5 /* Libraries */,
 				35D3681E152A455F002D308D /* Products */,
@@ -546,7 +546,7 @@
 		35D3681E152A455F002D308D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				35D3681D152A455F002D308D /* socioville.app */,
+				35D3681D152A455F002D308D /* Pomp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -563,10 +563,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		35D36827152A455F002D308D /* socioville */ = {
+		35D36827152A455F002D308D /* Pomp */ = {
 			isa = PBXGroup;
 			children = (
-				AB402B141617B7DA0054C344 /* Pomp */,
+				AB402B141617B7DA0054C344 /* Class */,
 				7B788A56153456BF00280576 /* Repository */,
 				35D36833152A455F002D308D /* MainStoryboard_iPhone.storyboard */,
 				35D36836152A455F002D308D /* MainStoryboard_iPad.storyboard */,
@@ -574,16 +574,17 @@
 				35D36828152A455F002D308D /* Supporting Files */,
 				7B2CEB8A152D9525004AA3DD /* Resources */,
 			);
+			name = Pomp;
 			path = socioville;
 			sourceTree = "<group>";
 		};
 		35D36828152A455F002D308D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				35D36829152A455F002D308D /* socioville-Info.plist */,
+				35D36829152A455F002D308D /* Pomp-Info.plist */,
 				35D3682A152A455F002D308D /* InfoPlist.strings */,
 				35D3682D152A455F002D308D /* main.m */,
-				35D3682F152A455F002D308D /* socioville-Prefix.pch */,
+				35D3682F152A455F002D308D /* Pomp-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -635,6 +636,24 @@
 				EC52D09C153D703C00675743 /* CardCell.m */,
 			);
 			path = MasterView;
+			sourceTree = "<group>";
+		};
+		4E80CCCB1617BE530028CA66 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				AB402B1B1617B8520054C344 /* PompManagerDelegate.h */,
+				AB402B181617B8520054C344 /* PompComunicatorDelegate.h */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
+		4E80CCCC1617BE620028CA66 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				AB402B1C1617B8520054C344 /* Video.h */,
+				AB402B1D1617B8520054C344 /* Video.m */,
+			);
+			name = Modal;
 			sourceTree = "<group>";
 		};
 		7B2221E2152B068D0041DAB5 /* iPhone Views */ = {
@@ -1052,21 +1071,19 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		AB402B141617B7DA0054C344 /* Pomp */ = {
+		AB402B141617B7DA0054C344 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				4E80CCCC1617BE620028CA66 /* Modal */,
+				4E80CCCB1617BE530028CA66 /* Protocol */,
 				AB402B161617B8520054C344 /* PompCommunicator.h */,
 				AB402B171617B8520054C344 /* PompCommunicator.m */,
-				AB402B181617B8520054C344 /* PompComunicatorDelegate.h */,
 				AB402B191617B8520054C344 /* PompManager.h */,
 				AB402B1A1617B8520054C344 /* PompManager.m */,
-				AB402B1B1617B8520054C344 /* PompManagerDelegate.h */,
-				AB402B1C1617B8520054C344 /* Video.h */,
-				AB402B1D1617B8520054C344 /* Video.m */,
 				AB402B1E1617B8520054C344 /* VideoBuilder.h */,
 				AB402B1F1617B8520054C344 /* VideoBuilder.m */,
 			);
-			name = Pomp;
+			name = Class;
 			sourceTree = "<group>";
 		};
 		EC52D091153D63E600675743 /* ColorSwitcher */ = {
@@ -1083,9 +1100,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		35D3681C152A455F002D308D /* socioville */ = {
+		35D3681C152A455F002D308D /* Pomp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 35D36841152A455F002D308D /* Build configuration list for PBXNativeTarget "socioville" */;
+			buildConfigurationList = 35D36841152A455F002D308D /* Build configuration list for PBXNativeTarget "Pomp" */;
 			buildPhases = (
 				35D36819152A455F002D308D /* Sources */,
 				35D3681A152A455F002D308D /* Frameworks */,
@@ -1095,9 +1112,9 @@
 			);
 			dependencies = (
 			);
-			name = socioville;
+			name = Pomp;
 			productName = socioville;
-			productReference = 35D3681D152A455F002D308D /* socioville.app */;
+			productReference = 35D3681D152A455F002D308D /* Pomp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1109,7 +1126,7 @@
 				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Universitatea Babeș-Bolyai";
 			};
-			buildConfigurationList = 35D36817152A455F002D308D /* Build configuration list for PBXProject "socioville" */;
+			buildConfigurationList = 35D36817152A455F002D308D /* Build configuration list for PBXProject "Pomp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1121,7 +1138,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				35D3681C152A455F002D308D /* socioville */,
+				35D3681C152A455F002D308D /* Pomp */,
 			);
 		};
 /* End PBXProject section */
@@ -1451,9 +1468,9 @@
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "socioville/socioville-Prefix.pch";
-				INFOPLIST_FILE = "socioville/socioville-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "socioville/Pomp-Prefix.pch";
+				INFOPLIST_FILE = "socioville/Pomp-Info.plist";
+				PRODUCT_NAME = Pomp;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1464,9 +1481,9 @@
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "socioville/socioville-Prefix.pch";
-				INFOPLIST_FILE = "socioville/socioville-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "socioville/Pomp-Prefix.pch";
+				INFOPLIST_FILE = "socioville/Pomp-Info.plist";
+				PRODUCT_NAME = Pomp;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1475,7 +1492,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		35D36817152A455F002D308D /* Build configuration list for PBXProject "socioville" */ = {
+		35D36817152A455F002D308D /* Build configuration list for PBXProject "Pomp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				35D3683F152A455F002D308D /* Debug */,
@@ -1484,7 +1501,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		35D36841152A455F002D308D /* Build configuration list for PBXNativeTarget "socioville" */ = {
+		35D36841152A455F002D308D /* Build configuration list for PBXNativeTarget "Pomp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				35D36842152A455F002D308D /* Debug */,
