@@ -14,11 +14,11 @@
 		35D3682C152A455F002D308D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35D3682A152A455F002D308D /* InfoPlist.strings */; };
 		35D3682E152A455F002D308D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D3682D152A455F002D308D /* main.m */; };
 		35D36835152A455F002D308D /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35D36833152A455F002D308D /* MainStoryboard_iPhone.storyboard */; };
-		35D36838152A455F002D308D /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35D36836152A455F002D308D /* MainStoryboard_iPad.storyboard */; };
 		35D3685C152A483C002D308D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D36850152A483C002D308D /* AppDelegate.m */; };
 		35D3685D152A483C002D308D /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D36854152A483C002D308D /* DetailViewController.m */; };
 		35D3685E152A483C002D308D /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D36857152A483C002D308D /* MasterViewController.m */; };
 		35D65D4815617B48009FC3C0 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D65D4715617B48009FC3C0 /* ModalViewController.m */; };
+		4E52BA4A1617CDF300D614F7 /* UIImageView+Network.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E52BA471617CDC000D614F7 /* UIImageView+Network.m */; };
 		7B2221E6152B068D0041DAB5 /* UIElementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2221E5152B068D0041DAB5 /* UIElementsViewController.m */; };
 		7B2221F9152B0A090041DAB5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2221EE152B0A090041DAB5 /* BaseViewController.m */; };
 		7B2221FA152B0A090041DAB5 /* CustomTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2221F0152B0A090041DAB5 /* CustomTabBarViewController.m */; };
@@ -249,7 +249,6 @@
 		35D3682D152A455F002D308D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35D3682F152A455F002D308D /* Pomp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pomp-Prefix.pch"; sourceTree = "<group>"; };
 		35D36834152A455F002D308D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		35D36837152A455F002D308D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		35D3684F152A483C002D308D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		35D36850152A483C002D308D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		35D36853152A483C002D308D /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -258,6 +257,8 @@
 		35D36857152A483C002D308D /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		35D65D4615617B48009FC3C0 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
 		35D65D4715617B48009FC3C0 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		4E52BA461617CDC000D614F7 /* UIImageView+Network.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Network.h"; sourceTree = "<group>"; };
+		4E52BA471617CDC000D614F7 /* UIImageView+Network.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Network.m"; sourceTree = "<group>"; };
 		7B2221E4152B068D0041DAB5 /* UIElementsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIElementsViewController.h; sourceTree = "<group>"; };
 		7B2221E5152B068D0041DAB5 /* UIElementsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIElementsViewController.m; sourceTree = "<group>"; };
 		7B2221ED152B0A090041DAB5 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -569,7 +570,6 @@
 				AB402B141617B7DA0054C344 /* Class */,
 				7B788A56153456BF00280576 /* Repository */,
 				35D36833152A455F002D308D /* MainStoryboard_iPhone.storyboard */,
-				35D36836152A455F002D308D /* MainStoryboard_iPad.storyboard */,
 				35D3684D152A483C002D308D /* Classes */,
 				35D36828152A455F002D308D /* Supporting Files */,
 				7B2CEB8A152D9525004AA3DD /* Resources */,
@@ -636,6 +636,15 @@
 				EC52D09C153D703C00675743 /* CardCell.m */,
 			);
 			path = MasterView;
+			sourceTree = "<group>";
+		};
+		4E52BA491617CDC300D614F7 /* ZTNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				4E52BA461617CDC000D614F7 /* UIImageView+Network.h */,
+				4E52BA471617CDC000D614F7 /* UIImageView+Network.m */,
+			);
+			name = ZTNetworking;
 			sourceTree = "<group>";
 		};
 		4E80CCCB1617BE530028CA66 /* Protocol */ = {
@@ -1074,6 +1083,7 @@
 		AB402B141617B7DA0054C344 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				4E52BA491617CDC300D614F7 /* ZTNetworking */,
 				4E80CCCC1617BE620028CA66 /* Modal */,
 				4E80CCCB1617BE530028CA66 /* Protocol */,
 				AB402B161617B8520054C344 /* PompCommunicator.h */,
@@ -1150,7 +1160,6 @@
 			files = (
 				35D3682C152A455F002D308D /* InfoPlist.strings in Resources */,
 				35D36835152A455F002D308D /* MainStoryboard_iPhone.storyboard in Resources */,
-				35D36838152A455F002D308D /* MainStoryboard_iPad.storyboard in Resources */,
 				7B2CEC24152D9525004AA3DD /* back.png in Resources */,
 				7B2CEC25152D9525004AA3DD /* back@2x.png in Resources */,
 				7B2CEC26152D9525004AA3DD /* card.png in Resources */,
@@ -1381,6 +1390,7 @@
 				AB402B211617B8520054C344 /* PompManager.m in Sources */,
 				AB402B221617B8520054C344 /* Video.m in Sources */,
 				AB402B231617B8520054C344 /* VideoBuilder.m in Sources */,
+				4E52BA4A1617CDF300D614F7 /* UIImageView+Network.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1401,14 +1411,6 @@
 				35D36834152A455F002D308D /* en */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		35D36836152A455F002D308D /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				35D36837152A455F002D308D /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1472,6 +1474,7 @@
 				INFOPLIST_FILE = "socioville/Pomp-Info.plist";
 				PRODUCT_NAME = Pomp;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1485,6 +1488,7 @@
 				INFOPLIST_FILE = "socioville/Pomp-Info.plist";
 				PRODUCT_NAME = Pomp;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

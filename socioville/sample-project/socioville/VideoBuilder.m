@@ -30,7 +30,7 @@
     }
     
     NSMutableArray *results = [[NSMutableArray alloc] initWithCapacity:[videos count]];
-    for (NSDictionary *parsedVideo in results) {
+    for (NSDictionary *parsedVideo in videos) {
         Video *video = [[Video alloc] initWithTitle:[parsedVideo valueForKey:@"title"] description:[parsedVideo valueForKey:@"description"]
                                      avatarLocation:[NSURL URLWithString:[[parsedVideo valueForKey:@"thumbnail"] valueForKey:@"hqDefault"]]
                                       videoLocation:[NSURL URLWithString:[[parsedVideo valueForKey:@"content"] valueForKey:@"5"]]];
@@ -38,7 +38,7 @@
         [results addObject:video];
     }
     
-    return results;
+    return [results copy];
 }
 
 @end

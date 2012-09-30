@@ -11,10 +11,19 @@
 #import "DetailViewController.h"
 #import "AppDelegate.h"
 
-@interface MasterViewController ()
+#import "UIImageView+Network.h"
+#import "PompManagerDelegate.h"
+#import "PompManager.h"
+#import "PompCommunicator.h"
+#import "VideoBuilder.h"
+#import "Video.h"
 
+@interface MasterViewController ()<PompManagerDelegate>
 @property (retain, nonatomic) UIPanGestureRecognizer *navigationBarPanGestureRecognizer;
+@property (copy, nonatomic) NSArray *videos;
+@property (strong) PompManager *manager;
 
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end
 
 @implementation MasterViewController
@@ -31,8 +40,17 @@
     [super awakeFromNib];
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
+    
+    _manager = [[PompManager alloc] init];
+    self.manager.communicator = [[PompCommunicator alloc] init];
+    self.manager.communicator.delegate = _manager;
+    self.manager.videoBuilder = [[VideoBuilder alloc] init];
+    self.manager.delegate = self;
+    
+    [self.manager fetchFeedFromYoutube];
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:[[AppDelegate instance].colorSwitcher getImageWithName:@"background.png"]];
@@ -104,35 +122,55 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return [self.videos count];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 215;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 201;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CardCell"];
-    //NSDate *object = [_objects objectAtIndex:indexPath.row];
+    
+    [self configureCell:cell atIndexPath:indexPath];
     
     return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        self.detailViewController.detailItem = @"detail";
-    } else {
-        [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        [[segue destinationViewController] setDetailItem:@"detail"];
+        Video *video = [self.videos objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
+        [[segue destinationViewController] setDetailItem:video.title];
+        [[segue destinationViewController] setVideo:video];
     }
+}
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
+   Video *video = [self.videos objectAtIndex:indexPath.row];
+    
+    UIImageView *avatar = (UIImageView *)[cell.contentView viewWithTag:1];
+    [avatar loadImageWithUrl:video.avatarUrl];
+    
+    UILabel *title = (UILabel *)[cell.contentView viewWithTag:2];
+    title.text = video.title;
+}
+
+#pragma mark - PompManagerDelegate
+
+- (void)didReceiveVideo:(NSArray *)videos
+{
+    self.videos = [videos copy];
+    
+    [self.tableView reloadData];
+}
+
+- (void)fetchVideoFromYoutubeFailedWithError:(NSError *)error
+{
+    
 }
 
 @end

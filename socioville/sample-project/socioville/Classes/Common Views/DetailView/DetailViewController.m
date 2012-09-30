@@ -11,6 +11,9 @@
 #import "CustomTabBarViewController.h"
 #import "AppDelegate.h"
 
+#import "UIImageView+Network.h"
+#import "Video.h"
+
 @interface DetailViewController ()
 
 @property (strong, nonatomic) MPMoviePlayerController *movieController;
@@ -23,26 +26,13 @@
 
 @implementation DetailViewController
 
-@synthesize detailItem = _detailItem;
-@synthesize tableView = _tableView;
-@synthesize detailDescriptionLabel = _detailDescriptionLabel;
-@synthesize masterPopoverController = _masterPopoverController;
 @synthesize movieController, playButton;
 
 #pragma mark - Managing the detail item
 
 - (void)setDetailItem:(id)newDetailItem
 {
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
-        
-        // Update the view.
-        [self configureView];
-    }
-
-    if (self.masterPopoverController != nil) {
-        [self.masterPopoverController dismissPopoverAnimated:YES];
-    }        
+    self.title = newDetailItem;       
 }
 
 - (void)configureView
@@ -70,43 +60,18 @@
     
     [playButton setImage:[[AppDelegate instance].colorSwitcher getImageWithName:@"play.png"] forState:UIControlStateNormal];
     
+    [self.avatarImageView loadImageWithUrl:self.video.avatarUrl];
 }
 
 - (void)viewDidUnload
 {
     [self setTableView:nil];
+    [self setAvatarImageView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     self.detailDescriptionLabel = nil;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    
-    UIViewController *mainController = self.navigationController.parentViewController;
-    CustomTabBarViewController *tabbar = (CustomTabBarViewController *)mainController.navigationController.parentViewController;
-    if(tabbar.allowLandscape || UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else {
-        return (interfaceOrientation == UIInterfaceOrientationPortrait);
-    }
-}
-
-#pragma mark - Split view
-
-- (void)splitViewController:(UISplitViewController *)splitController willHideViewController:(UIViewController *)viewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)popoverController
-{
-    barButtonItem.title = NSLocalizedString(@"Cards", @"Cards");
-    [self.navigationItem setLeftBarButtonItem:barButtonItem animated:YES];
-    self.masterPopoverController = popoverController;
-}
-
-- (void)splitViewController:(UISplitViewController *)splitController willShowViewController:(UIViewController *)viewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
-{
-    // Called when the view is shown again in the split view, invalidating the button and popover controller.
-    [self.navigationItem setLeftBarButtonItem:nil animated:YES];
-    self.masterPopoverController = nil;
-}
 
 #pragma mark - Table View
 
@@ -142,7 +107,7 @@
 
 - (IBAction)playMovie:(id)sender {
     NSURL* movieURL =  [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"punkduck" ofType:@"mp4"]];
-    [self showMovieForURL:movieURL];   
+    [self showMovieForURL:[NSURL URLWithString:@"http://m.youtube.com/#/watch?v=v0TFPc6EwhM"]];
 }
 
 - (void)willEnterFullscreen:(NSNotification*)notification {
